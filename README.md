@@ -13,6 +13,7 @@ Caso as ações indesejadas continuem ocorrendo mesmo com as verificações que 
     composer require pollus/watchdog
 
 Crie a tabela "watchdog_logs" com a seguinte estrutura:
+
 ```sql
 CREATE TABLE IF NOT EXISTS `watchdog_logs` 
 (
@@ -60,6 +61,7 @@ $login_watchdog = new Watchdog("login", $adapter, $fingerprint, $options);
 ```
 
 **Exemplo de Watchdog para proteger um formulário de login**
+
 ```php
 
 if ($login_watchdog->isBanned())
@@ -83,6 +85,7 @@ else
 ```
 
 **Opções**
+    
     "suspect_counter": int, default (5)
     Define o número de ações que serão toleradas na janela de análise antes de sinalizar como "suspeito"
 
